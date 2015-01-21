@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>    
+            <?php echo $this->title; ?>
+        </title>
+    </head>
+    <body>
+        <h4><?php echo $this->header; ?></h4>
+        <?php foreach($this->products as $product){
+            echo '<h4>'.$product['title'].'</h4>';
+            echo '<h4>'.$product['desc_short'].'</h4>';
+            echo '<p>'.$product['description'].'</p>';
+            echo '<a href="/blog/comments/id/' . $product['id'] . '"> Comments</a>';
+            echo '<hr/>';
+        }
+        
+            ?>
+    </body>
+</html>

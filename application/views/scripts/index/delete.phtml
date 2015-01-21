@@ -1,0 +1,19 @@
+<?php
+$this->title = 'Удаление продукта'; 
+$this->headTitle($this->title);
+?>
+
+<p>Вы действительно хотите удалить подукт?
+'<?php  echo $this->escape($this->product['title']);?>' от
+'<?php  echo $this->escape($this->product['description']); ?>'
+'<?php  echo $this->escape($this->product['image']); ?>'
+'<?php  echo $this->escape($this->product['spread_type']); ?>'
+</p>
+<form action = "<?php  echo $this->url(array('action'=> 'delete')); ?>"
+method = "post">
+	<div>
+		<input type = "hidden" name="id" value="<?php echo $this->product['id'];?>"/>
+		<input type ="submit" name="del" value="да"/>
+		<input type ="submit" name="del" value="нет"/>
+	</div>
+</form> 

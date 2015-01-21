@@ -1,0 +1,11 @@
+ <tr>
+  <td><?php echo $this->escape($this->title);?></td>
+  <td><?php echo $this->escape($this->description); ?></td>
+  <td><?php echo $this->escape($this->image); ?></td>
+  <td><?php echo $this->escape($this->spread_type); ?></td>
+  <td>
+  <a href="<?php echo $this->url(array('controller'=> 'index', 'action'=>'edit','id'=>$this->id)); ?>">Редактировать</a>
+  <a href="<?php echo $this->url(array('controller'=> 'index', 'action'=>'delete','id'=>$this->id)); ?>">Удалить</a>
+  </td>
+ </tr>
+ 

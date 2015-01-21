@@ -1,0 +1,19 @@
+<?php
+
+$this->title = 'Мои продукты';
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller'=>'index','action'=>'add')); ?>">Добавить новый продукт</a></p>
+<table>
+    <tr>
+        <td>Заголовок</td>
+        <td>Описание</td>
+        <td>Расклад</td>
+        <td>Изображение</td>
+    </tr>
+   
+   
+    <?php
+    echo $this->partialLoop('partials/product.phtml', $this->products);
+    ?>
+</table>
